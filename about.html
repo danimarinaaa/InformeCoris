@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Especies Observadas</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">My Website</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Inicio</a>
+</li>
+<li>
+  <a href="about.html">Especies Observadas</a>
+</li>
+<li>
+  <a href="especies.html">Descripción Especies</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Especies Observadas</h1>
+
+</div>
+
+
+<br />
+
+<p align="justify">
+En el cuadro 1 se observa el total de las especies observadas en la gira a Coris de Cartago, 62 especies. También, se muestra el grado de amenaza de las poblaciones de cada especie (IUCN, 2019) y el estatus de las especies en Costa Rica, según la Lista Oficial de la Asociación Ornitologica Costaricense (2018).
+</p>
+<br />
+
+<p align="justify">
+<strong>Cuadro 1.</strong> Lista de las especies de aves observadas en Coris, Cartago.
+</p>
+<br />
+
+<p align="center">
+<!-- html table generated in R 3.5.2 by xtable 1.8-3 package -->
+<!-- Tue Mar 26 19:32:14 2019 -->
+<table border="0">
+<caption align="bottom">
+</caption>
+<tr>
+<th>
+</th>
+<th>
+Especies
+</th>
+<th>
+Estatus
+</th>
+<th>
+Grado.amenaza.UICN
+</th>
+</tr>
+<tr>
+<td align="right">
+1
+</td>
+<td>
+American Coot (Fulica americana)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+2
+</td>
+<td>
+Baltimore Oriole (Icterus galbula)
+</td>
+<td>
+M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+3
+</td>
+<td>
+Black Hawk-Eagle (Spizaetus tyrannus)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+4
+</td>
+<td>
+Black Phoebe (Sayornis nigricans)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+5
+</td>
+<td>
+Black Vulture (Coragyps atratus)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+6
+</td>
+<td>
+Black-bellied Whistling-Duck (Dendrocygna autumnalis)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+7
+</td>
+<td>
+Black-necked Stilt (Himantopus mexicanus)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+8
+</td>
+<td>
+Blue-and-white Swallow (Pygochelidon cyanoleuca)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+9
+</td>
+<td>
+Blue-winged Teal (Spatula discors)
+</td>
+<td>
+M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+10
+</td>
+<td>
+Broad-winged Hawk (Buteo platypterus)
+</td>
+<td>
+M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+11
+</td>
+<td>
+Brown Jay (Psilorhinus morio)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+12
+</td>
+<td>
+Cabanis’s Ground-Sparrow (Melozone cabanisi)
+</td>
+<td>
+R-END
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+13
+</td>
+<td>
+Cabanis’s Wren (Cantorchilus modestus)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+14
+</td>
+<td>
+Cattle Egret (Bubulcus ibis)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+15
+</td>
+<td>
+Common Gallinule (Gallinula galeata)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+16
+</td>
+<td>
+Eastern Meadowlark (Sturnella magna)
+</td>
+<td>
+R
+</td>
+<td>
+NT
+</td>
+</tr>
+<tr>
+<td align="right">
+17
+</td>
+<td>
+Great Egret (Ardea alba)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+18
+</td>
+<td>
+Great Kiskadee (Pitangus sulphuratus)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+19
+</td>
+<td>
+Great-tailed Grackle (Quiscalus mexicanus)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+20
+</td>
+<td>
+Green Heron (Butorides virescens)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+21
+</td>
+<td>
+Hoffmann’s Woodpecker (Melanerpes hoffmannii)
+</td>
+<td>
+R-END
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+22
+</td>
+<td>
+House Sparrow (Passer domesticus)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+23
+</td>
+<td>
+House Wren (Troglodytes aedon)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+24
+</td>
+<td>
+Inca Dove (Columbina inca)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+25
+</td>
+<td>
+Killdeer (Charadrius vociferus)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+26
+</td>
+<td>
+Least Grebe (Tachybaptus dominicus)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+27
+</td>
+<td>
+Lesser Goldfinch (Spinus psaltria)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+28
+</td>
+<td>
+Lesson’s Motmot (Momotus lessonii)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+29
+</td>
+<td>
+Little Blue Heron (Egretta caerulea)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+30
+</td>
+<td>
+Louisiana Waterthrush (Parkesia motacilla)
+</td>
+<td>
+M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+31
+</td>
+<td>
+Melodious Blackbird (Dives dives)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+32
+</td>
+<td>
+Mistletoe Tyrannulet (Zimmerius parvus)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+33
+</td>
+<td>
+Montezuma Oropendola (Psarocolius montezuma)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+34
+</td>
+<td>
+Morelet’s Seedeater (Sporophila morelleti)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+35
+</td>
+<td>
+Mourning Dove (Zenaida macroura)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+36
+</td>
+<td>
+Mourning Warbler (Geothlypis philadelphia)
+</td>
+<td>
+M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+37
+</td>
+<td>
+Northern Jacana (Jacana spinosa)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+38
+</td>
+<td>
+Northern Rough-winged Swallow (Stelgidopteryx serripennis)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+39
+</td>
+<td>
+Orange-billed Nightingale-Thrush (Catharus aurantiirostris)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+40
+</td>
+<td>
+Red-billed Pigeon (Patagioenas flavirostris)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+41
+</td>
+<td>
+Roadside Hawk (Rupornis magnirostris)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+42
+</td>
+<td>
+Ruddy Ground-Dove (Columbina talpacoti)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+43
+</td>
+<td>
+Rufous-capped Warbler (Basileuterus rufifrons)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+44
+</td>
+<td>
+Rufous-collared Sparrow (Zonotrichia capensis)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+45
+</td>
+<td>
+Rufous-tailed Hummingbird (Amazilia tzacatl)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+46
+</td>
+<td>
+Short-tailed Hawk (Buteo brachyurus)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+47
+</td>
+<td>
+Snowy Egret (Egretta thula)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+48
+</td>
+<td>
+Social Flycatcher (Myiozetetes similis)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+49
+</td>
+<td>
+Southern Lapwing (Vanellus chilensis)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+50
+</td>
+<td>
+Squirrel Cuckoo (Piaya cayana)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+51
+</td>
+<td>
+Steely-vented Hummingbird (Amazilia saucerottei)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+52
+</td>
+<td>
+Summer Tanager (Piranga rubra)
+</td>
+<td>
+M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+53
+</td>
+<td>
+Tennessee Warbler (Oreothlypis peregrina)
+</td>
+<td>
+M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+54
+</td>
+<td>
+Tropical Kingbird (Tyrannus melancholicus)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+55
+</td>
+<td>
+Turkey Vulture (Cathartes aura)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+56
+</td>
+<td>
+White-tailed Kite (Elanus leucurus)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+57
+</td>
+<td>
+White-tipped Dove (Leptotila verreauxi)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+58
+</td>
+<td>
+White-winged Dove (Zenaida asiatica)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+59
+</td>
+<td>
+Wilson’s Warbler (Cardellina pusilla)
+</td>
+<td>
+M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+60
+</td>
+<td>
+Yellow Warbler (Setophaga petechia)
+</td>
+<td>
+R-M
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+61
+</td>
+<td>
+Yellow-bellied Siskin (Spinus xanthogastrus)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+<tr>
+<td align="right">
+62
+</td>
+<td>
+Yellow-headed Caracara (Milvago chimachima)
+</td>
+<td>
+R
+</td>
+<td>
+LC
+</td>
+</tr>
+</table>
+<br />
+Fuente: Asociación Ornitológica Costarricense (2018); IUCN (2019).
+</p>
+<br />
+
+<p align="justify">
+En la figura 3 se observa un gráfico pastel donde se muestra información sobre el estatus de la especie en Costa Rica, según la Lista oficial de la Asociación Ornitologica Costaricense (2018). Donde del total de especies 62 especies: 8 se clasifican como “Migratorias” (M), 36 corresponden a la clasificación “Residentes” (R), “Residentes-Endémicas” (R-END) abarcó 2 especies del total y 16 especies son “Residentes-Migratorias” (R-M).
+</p>
+<br />
+
+<p align="center">
+<img src="imagenes/Estatus.png" width="600" /><br />
+<strong>Figura 3.</strong> Gráfico Pastel para el estatus de las especies observadas en la gira a Coris. Fuente: Asociación Ornitológica Costarricense (2018).
+</p>
+<br />
+En la figura 4 se muestra un gráfico pastel donde se comtempla el grado de amenaza de las especies observadas, de acuerdo con la IUCN. Del total de las especies observadas solamente se encontraron dos clasificaciones con respecto al grado de amenaza, correspondientes a: “Menor preocupación” (LC) donde se clasificaron 61 del total de las especies y “Casi amenazada” (NT).<br />
+<br />
+
+<p align="center">
+<img src="imagenes/GradoA.png" width="600" />
+</p>
+<br />
+
+<p align="justify">
+<strong>Figura 4.</strong> Gráfico para el grado de amenaza para las aves apreciadas en la gira a Coris. Fuente: IUCN (2019).
+</p>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
